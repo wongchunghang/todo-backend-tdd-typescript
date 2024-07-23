@@ -1,0 +1,22 @@
+-- Table: public.todos
+
+-- DROP TABLE IF EXISTS public.todos;
+
+CREATE TABLE IF NOT EXISTS public.todos
+(
+    id serial PRIMARY KEY,
+    name character varying(255) COLLATE pg_catalog."default" NOT NULL
+)
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.todos
+    OWNER to postgres;
+
+-- Index: idx_name
+
+-- DROP INDEX IF EXISTS public.idx_name;
+
+CREATE INDEX IF NOT EXISTS idx_name
+    ON public.todos USING btree
+    (name COLLATE pg_catalog."default" ASC NULLS LAST)
+    TABLESPACE pg_default;
