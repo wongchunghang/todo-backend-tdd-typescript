@@ -84,6 +84,9 @@ npm run dev
 
 This will start the server using `ts-node-dev` and watch for any changes in the source files.
 
+### Database Setup
+Run SQL in Postgresql in ./scripts/DB
+
 ### Production
 
 To build and start the application for production, run:
