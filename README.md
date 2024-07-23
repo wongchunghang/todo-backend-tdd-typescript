@@ -1,4 +1,3 @@
-```markdown
 # Todo App
 
 ## Introduction
